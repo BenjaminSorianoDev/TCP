@@ -4,19 +4,33 @@
 public class AbstractTransition {
 
     /**
-     * TODO
+     *
+     */
+    Satisfiable<T> aCondition;
+    /**
+     *
+     */
+    Performable<T> anAction;
+    /**
+     *
+     */
+    private AbstractState nextState;
+
+    /**
+     *
      * @return
      */
-    public boolean isFirable(){
-        return true;
+    public boolean isFirable(T aContext){
+        return this.aCondition.isSatisfied(aContext);
     }
 
     /**
-     * TODO
-     * @param acontext
+     *
+     * @param aContext
      * @return
      */
-    public AbstractState fire(T acontext) {
-        return null;
+    public AbstractState fire(T aContext) {
+        anAction.perform(aContext);
+        return this.nextState;
     }
 }
