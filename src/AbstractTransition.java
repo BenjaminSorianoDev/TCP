@@ -6,11 +6,11 @@ public class AbstractTransition {
     /**
      *
      */
-    Satisfiable<T> aCondition;
+    Satisfiable<Context> aCondition;
     /**
      *
      */
-    Performable<T> anAction;
+    Performable<Context> anAction;
     /**
      *
      */
@@ -20,7 +20,7 @@ public class AbstractTransition {
      *
      * @return
      */
-    public boolean isFirable(T aContext){
+    public boolean isFirable(Context aContext){
         return this.aCondition.isSatisfied(aContext);
     }
 
@@ -29,7 +29,7 @@ public class AbstractTransition {
      * @param aContext
      * @return
      */
-    public AbstractState fire(T aContext) {
+    public AbstractState fire(Context aContext) {
         anAction.perform(aContext);
         return this.nextState;
     }

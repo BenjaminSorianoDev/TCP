@@ -11,11 +11,11 @@ public class AbstractState {
     private final LinkedHashSet<AbstractTransition> transitionSet= new LinkedHashSet<>();
 
     /**
-     * 
+     *
      * @param aContext
      * @return
      */
-    AbstractState fire(T aContext){
+    AbstractState fire(Context aContext){
         Iterator it = transitionSet.iterator();
         while(it.hasNext())
         {
