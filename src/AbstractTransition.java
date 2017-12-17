@@ -1,18 +1,18 @@
 /**
  * @author BSo
  **/
-public class AbstractTransition {
+public abstract class AbstractTransition {
 
     /**
-     *
+     * The condition to make the transition
      */
     Satisfiable<Context> aCondition;
     /**
-     *
+     * The action to perform
      */
     Performable<Context> anAction;
     /**
-     *
+     * The state where to go
      */
     private AbstractState nextState;
 

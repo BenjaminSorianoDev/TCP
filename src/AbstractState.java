@@ -3,17 +3,18 @@ import java.util.*;
 /**
  * @author BSo
  **/
-public class AbstractState {
+public abstract class AbstractState {
 
     /**
      * si quelqu'un arrive a la parcourir sans iterator ?
+     * Transitions List
      */
     private final LinkedHashSet<AbstractTransition> transitionSet= new LinkedHashSet<>();
 
     /**
-     *
+     * Start the state, path transitions and try to go to another state if it's not possible stay in the current state
      * @param aContext
-     * @return
+     * @return the new state to fire or the current state
      */
     AbstractState fire(Context aContext){
         Iterator it = transitionSet.iterator();
