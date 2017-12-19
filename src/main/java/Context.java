@@ -9,9 +9,31 @@ import main.java.state.AbstractState;
  **/
 public class Context {
 
+    public AbstractState getaState() {
+        return aState;
+    }
+
+    public void setaState(AbstractState aState) {
+        this.aState = aState;
+    }
+
+    public TCPServer getaTCPServer() {
+        return aTCPServer;
+    }
+
+    public ConcreteFactory getaConcreteFactory() {
+        return aConcreteFactory;
+    }
+
+    public void setaConcreteFactory(ConcreteFactory aConcreteFactory) {
+        this.aConcreteFactory = aConcreteFactory;
+    }
+
     /**
      * Current State
+
      */
+
     private AbstractState aState;
 
     /**

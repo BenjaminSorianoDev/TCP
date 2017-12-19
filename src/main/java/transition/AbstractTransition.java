@@ -10,18 +10,53 @@ import main.java.state.AbstractState;
  **/
 public abstract class AbstractTransition {
 
+    public Satisfiable getaCondition() {
+        return aCondition;
+    }
+
+    public void setaCondition(Satisfiable aCondition) {
+        this.aCondition = aCondition;
+    }
+
+    public Performable getAnAction() {
+        return anAction;
+    }
+
+    public void setAnAction(Performable anAction) {
+        this.anAction = anAction;
+    }
+
+    public AbstractState getNextState() {
+        return nextState;
+    }
+
+    public void setNextState(AbstractState nextState) {
+        this.nextState = nextState;
+    }
+
+    public Context getaContext() {
+        return aContext;
+    }
+
+    public void setaContext(Context aContext) {
+        this.aContext = aContext;
+    }
+
     /**
      * The condition to make the transition
      */
-    private Satisfiable<Context> aCondition;
+
+    private Satisfiable aCondition;
     /**
      * The action to perform
      */
-    private Performable<Context> anAction;
+    private Performable anAction;
     /**
      * The state where to go
      */
     private AbstractState nextState;
+
+    private Context aContext;
 
     /**
      *

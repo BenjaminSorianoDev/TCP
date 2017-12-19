@@ -23,7 +23,8 @@ public final class State0 extends AbstractState {
      * @param aContext
      */
     private State0(Context aContext){
-        // make the transitionSet
+        // do the same thing with other transitions
+        this.getTransitionSet().add(aContext.getaConcreteFactory().createT01());
         State0.aContext = aContext;
     }
 

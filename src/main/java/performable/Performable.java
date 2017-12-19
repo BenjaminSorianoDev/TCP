@@ -1,9 +1,11 @@
 package main.java.performable;
 
+import main.java.Context;
+
 /**
  * @author BSo
  **/
-public interface Performable<Context> {
+public interface Performable {
 
     /**
      * TODO
