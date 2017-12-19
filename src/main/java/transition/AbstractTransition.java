@@ -1,3 +1,7 @@
+package main.java;
+
+import main.java.state.AbstractState;
+
 /**
  * @author BSo
  **/
@@ -6,11 +10,11 @@ public abstract class AbstractTransition {
     /**
      * The condition to make the transition
      */
-    Satisfiable<Context> aCondition;
+    private Satisfiable<Context> aCondition;
     /**
      * The action to perform
      */
-    Performable<Context> anAction;
+    private Performable<Context> anAction;
     /**
      * The state where to go
      */
