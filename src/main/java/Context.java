@@ -1,3 +1,9 @@
+package main.java;
+
+import main.java.factory.AbstractFactory;
+import main.java.factory.ConcreteFactory;
+import main.java.state.AbstractState;
+
 /**
  * TODO
  * @author BSo
@@ -10,7 +16,7 @@ public class Context {
     private AbstractState aState;
 
     /**
-     * The TCPServer
+     * The main.java.TCPServer
      */
     private final TCPServer aTCPServer;
 
@@ -30,7 +36,7 @@ public class Context {
     }
 
     /**
-     * Start the TCPServer
+     * Start the main.java.TCPServer
      */
     public void contextTry(){
         this.aState = aState.fire(this);

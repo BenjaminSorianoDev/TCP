@@ -1,5 +1,8 @@
-package main.java;
+package main.java.transition;
 
+import main.java.Context;
+import main.java.Performable;
+import main.java.Satisfiable;
 import main.java.state.AbstractState;
 
 /**
