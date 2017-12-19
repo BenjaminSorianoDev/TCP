@@ -3,13 +3,13 @@ package main.java;
 /**
  * @author BSo
  **/
-public class Satisfiable<T> {
+public class Satisfiable<Context> {
     /**
      * TODO
      * @param aContexte
      * @return
      */
-    public boolean isSatisfied(T aContexte){
+    public boolean isSatisfied(Context aContexte){
         return false;
     }
 }

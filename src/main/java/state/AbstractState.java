@@ -11,10 +11,25 @@ import java.util.*;
 public abstract class AbstractState {
 
     /**
-     * si quelqu'un arrive a la parcourir sans iterator ?
      * Transitions List
      */
-    private final LinkedHashSet<AbstractTransition> transitionSet= new LinkedHashSet<>();
+    private LinkedHashSet<AbstractTransition> transitionSet= new LinkedHashSet<>();
+
+    /**
+     *
+     * @param transitionSet
+     */
+    public void setTransitionSet(LinkedHashSet<AbstractTransition> transitionSet) {
+        this.transitionSet = transitionSet;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public LinkedHashSet<AbstractTransition> getTransitionSet() {
+        return transitionSet;
+    }
 
     /**
      * Start the state, path transitions and try to go to another state if it's not possible stay in the current state

@@ -1,6 +1,5 @@
 package main.java;
 
-import main.java.factory.AbstractFactory;
 import main.java.factory.ConcreteFactory;
 import main.java.state.AbstractState;
 
@@ -23,16 +22,15 @@ public class Context {
     /**
      * A factory to create Object ( States )
      */
-    private AbstractFactory anAbstractFactory;
+    private ConcreteFactory aConcreteFactory;
 
     /**
-     * Class constructor
      * @param aTCPServer
      */
     public Context(TCPServer aTCPServer){
-        this.anAbstractFactory = new ConcreteFactory();
+        this.aConcreteFactory = new ConcreteFactory(this);
         this.aTCPServer = aTCPServer;
-        aState = anAbstractFactory.createState0();
+        aState = aConcreteFactory.createState0();
     }
 
     /**

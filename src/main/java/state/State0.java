@@ -1,5 +1,6 @@
 package main.java.state;
 
+import main.java.Context;
 import main.java.TCPServer;
 
 /**
@@ -15,26 +16,26 @@ public final class State0 extends AbstractState {
     /**
      *
      */
-    private static TCPServer aTCPServer;
+    private static Context aContext;
 
     /**
      *
-     * @param aTCPServer
+     * @param aContext
      */
-    private State0(TCPServer aTCPServer){
-        super();
-        State0.aTCPServer = aTCPServer;
+    private State0(Context aContext){
+        // make the transitionSet
+        State0.aContext = aContext;
     }
 
     /**
      * Méthode permettant de renvoyer une instance de la classe Singleton
      * @return Retourne l'instance du singleton.
      */
-    public final static State0 getInstance(TCPServer aTCPServer){
+    public final static State0 getInstance(Context aContext){
         if (State0.instance == null) {
             synchronized(State0.class) {
                 if (State0.instance == null) {
-                    State0.instance = new State0(aTCPServer);
+                    State0.instance = new State0(aContext);
                 }
             }
         }
