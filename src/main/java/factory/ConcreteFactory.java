@@ -1,7 +1,7 @@
 package main.java.factory;
 
 import main.java.Context;
-import main.java.state.State0;
+import main.java.state.concrete.State0;
 
 /**
  * @author BSo
@@ -16,8 +16,8 @@ public class ConcreteFactory {
 
     /**
      * TODO
-     * Create a main.java.state.State0 instance
-     * @return a main.java.state.State0
+     * Create a main.java.state.concrete.State0 instance
+     * @return a main.java.state.concrete.State0
      */
     public State0 createState0() {
         return State0.getInstance(this.aContext);

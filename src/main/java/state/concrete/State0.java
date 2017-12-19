@@ -1,7 +1,7 @@
-package main.java.state;
+package main.java.state.concrete;
 
 import main.java.Context;
-import main.java.TCPServer;
+import main.java.state.AbstractState;
 
 /**
  * @author BSo
