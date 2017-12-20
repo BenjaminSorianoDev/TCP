@@ -6,7 +6,22 @@ import main.java.satisfiable.Satisfiable;
 /**
  * @author BSo
  **/
-public class TimeOverEvent implements Satisfiable {
+public final class TimeOverEvent implements Satisfiable {
+
+    public static volatile TimeOverEvent instance = null;
+
+    private TimeOverEvent(){}
+
+    public final static TimeOverEvent getInstance(){
+        if (TimeOverEvent.instance == null) {
+            synchronized(TimeOverEvent.class) {
+                if (TimeOverEvent.instance == null) {
+                    TimeOverEvent.instance = new TimeOverEvent();
+                }
+            }
+        }
+        return TimeOverEvent.instance;
+    }
     @Override
     public boolean isSatisfied(Context aContexte) {
         return false;

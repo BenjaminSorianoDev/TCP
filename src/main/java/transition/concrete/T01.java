@@ -15,7 +15,7 @@ public class T01 extends AbstractTransition {
 
     private T01(Context aContext){
         this.setaContext(aContext);
-        this.setaCondition(aContext.getaConcreteFactory().createC01());
+        this.setaCondition(aContext.getaConcreteFactory().createOpenEvent());
         this.setAnAction(aContext.getaConcreteFactory().createA01());
         // TODO
         //this.setNextState();
