@@ -6,9 +6,9 @@ import main.java.satisfiable.Satisfiable;
 /**
  * @author BSo
  **/
-public class C01 implements Satisfiable{
+public class ResetEvent implements Satisfiable {
     @Override
-    public boolean isSatisfied(Context aContext) {
+    public boolean isSatisfied(Context aContexte) {
         return false;
     }
 }
