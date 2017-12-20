@@ -1,7 +1,7 @@
 package main.java.factory;
 
 import main.java.Context;
-import main.java.performable.concrete.ActionForReset;
+import main.java.performable.concrete.*;
 import main.java.satisfiable.concrete.*;
 import main.java.state.concrete.State0;
 import main.java.transition.concrete.T01;
@@ -26,6 +26,9 @@ public class ConcreteFactory {
         return State0.getInstance(this.aContext);
     }
 
+    /*
+     * creation of Transition
+     */
     public T01 createT01() { return T01.getInstance(aContext); }
 
     /*
@@ -40,6 +43,16 @@ public class ConcreteFactory {
     public TimeOverEvent createTimeOverEvent() { return TimeOverEvent.getInstance();}
     public EndEvent createEndEvent() { return EndEvent.getInstance();}
 
-    public ActionForReset createA01() {return new ActionForReset();}
+    /*
+     * Creation of performable
+     */
+    public ActionForReset createActionForReset() {return ActionForReset.getInstance();}
+    public ActionOnTimer createActionOnTimer() {return ActionOnTimer.getInstance();}
+    public ActionOnAck createActionOnAck() {return ActionOnAck.getInstance();}
+    public ActionResetAll createActionResetAll() {return ActionResetAll.getInstance();}
+    public ActionToEnd createActionToEnd() {return ActionToEnd.getInstance();}
+    public ActionWaitMessage createActionWaitMessage() {return ActionWaitMessage.getInstance();}
+    public ActionWriteFinalMessage createActionWriteFinalMessage() {return ActionWriteFinalMessage.getInstance();}
+    public ActionWriteMessage createActionWriteMessage() {return ActionWriteMessage.getInstance();}
 
 }

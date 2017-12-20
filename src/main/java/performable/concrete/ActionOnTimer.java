@@ -6,7 +6,23 @@ import main.java.performable.Performable;
 /**
  * @author BSo
  **/
-public class ActionOnTimer implements Performable {
+public final class ActionOnTimer implements Performable {
+
+    public static volatile ActionOnTimer instance = null;
+
+    private ActionOnTimer(){}
+
+    public final static ActionOnTimer getInstance(){
+        if (ActionOnTimer.instance == null) {
+            synchronized(ActionOnTimer.class) {
+                if (ActionOnTimer.instance == null) {
+                    ActionOnTimer.instance = new ActionOnTimer();
+                }
+            }
+        }
+        return ActionOnTimer.instance;
+    }
+
     @Override
     public void perform(Context aContext) {
 

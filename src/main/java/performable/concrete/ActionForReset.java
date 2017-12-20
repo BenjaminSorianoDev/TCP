@@ -6,7 +6,23 @@ import main.java.performable.Performable;
 /**
  * @author BSo
  **/
-public class ActionForReset implements Performable{
+public final class ActionForReset implements Performable{
+
+    public static volatile ActionForReset instance = null;
+
+    private ActionForReset(){}
+
+    public final static ActionForReset getInstance(){
+        if (ActionForReset.instance == null) {
+            synchronized(ActionForReset.class) {
+                if (ActionForReset.instance == null) {
+                    ActionForReset.instance = new ActionForReset();
+                }
+            }
+        }
+        return ActionForReset.instance;
+    }
+
     @Override
     public void perform(Context aContext) {
     }
