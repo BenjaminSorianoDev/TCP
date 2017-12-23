@@ -6,7 +6,7 @@ import main.java.transition.AbstractTransition;
 /**
  * @author BSo
  **/
-public class T01 extends AbstractTransition {
+public final class T01 extends AbstractTransition {
 
     /**
      *
@@ -16,7 +16,7 @@ public class T01 extends AbstractTransition {
     private T01(Context aContext){
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createOpenEvent());
-        this.setAnAction(aContext.getaConcreteFactory().createA01());
+        this.setAnAction(aContext.getaConcreteFactory().createActionForReset());
         // TODO
         //this.setNextState();
     }
