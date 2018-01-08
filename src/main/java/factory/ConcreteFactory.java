@@ -7,7 +7,7 @@ import main.java.state.concrete.*;
 import main.java.transition.concrete.*;
 
 /**
- * @author BSo
+ * @author BSo & MMo
  **/
 public class ConcreteFactory {
 
@@ -71,7 +71,7 @@ public class ConcreteFactory {
     public T57 createT57() { return T57.getInstance(aContext); }
     public T610 createT610() { return T610.getInstance(aContext); }
     public T611 createT611() { return T611.getInstance(aContext); }
-    public T67 createT67() { return TT67.getInstance(aContext); }
+    public T67 createT67() { return T67.getInstance(aContext); }
     public T70 createT70() { return T70.getInstance(aContext); }
 
     /*

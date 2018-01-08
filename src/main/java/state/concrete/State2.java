@@ -5,7 +5,7 @@ import main.java.state.AbstractState;
 
 public class State2 extends AbstractState{
 	/**
-	    * instance de State 1
+	    * instance de State2
 	    */
 	   public static volatile State2 instance = null;
 
@@ -19,7 +19,6 @@ public class State2 extends AbstractState{
 	    * @param aContext
 	    */
 	   private State2(Context aContext){
-	       // do the same thing with other transitions
 	       this.getTransitionSet().add(aContext.getaConcreteFactory().createT210());
 	       this.getTransitionSet().add(aContext.getaConcreteFactory().createT211());
 	       this.getTransitionSet().add(aContext.getaConcreteFactory().createT23());
