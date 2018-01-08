@@ -6,13 +6,13 @@ import main.java.transition.AbstractTransition;
 /**
  * @author BSo
  **/
-public final class T667 extends AbstractTransition {
+public final class T67 extends AbstractTransition {
     /**
      *
      */
-    public static volatile T667 instance = null;
+    public static volatile T67 instance = null;
 
-    private T667(Context aContext){
+    private T67(Context aContext){
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createAbortEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionForReset());
@@ -20,14 +20,14 @@ public final class T667 extends AbstractTransition {
         //this.setNextState();
     }
 
-    public final static T667 getInstance(Context aContext){
-        if (T667.instance == null) {
-            synchronized(T667.class) {
-                if (T667.instance == null) {
-                    T667.instance = new T667(aContext);
+    public final static T67 getInstance(Context aContext){
+        if (T67.instance == null) {
+            synchronized(T67.class) {
+                if (T67.instance == null) {
+                    T67.instance = new T67(aContext);
                 }
             }
         }
-        return T667.instance;
+        return T67.instance;
     }
 }

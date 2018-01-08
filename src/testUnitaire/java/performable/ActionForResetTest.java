@@ -30,5 +30,11 @@ public class ActionForResetTest {
 		ActionForReset b = ActionForReset.getInstance();
 		assertEquals(a, b);
 	}
+	
+	@Test
+	public void testPerform()
+	{
+		fail("Not yet implemented");
+	}
 
 }
