@@ -60,5 +60,9 @@ public class TCPServer {
     public void writeMsg(){
 
     }
+    
+    public void timer() {
+    	
+    }
 
 }

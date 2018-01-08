@@ -25,5 +25,6 @@ public final class ActionForReset implements Performable{
 
     @Override
     public void perform(Context aContext) {
+    	aContext.getaTCPServer().writeRST();
     }
 }

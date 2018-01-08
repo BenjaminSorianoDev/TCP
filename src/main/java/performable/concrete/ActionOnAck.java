@@ -25,6 +25,8 @@ public final class ActionOnAck implements Performable {
 
     @Override
     public void perform(Context aContext) {
+    	aContext.getaTCPServer().writeACK();
+    	aContext.getaTCPServer().resetAll();
 
     }
 }

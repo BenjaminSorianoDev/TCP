@@ -25,6 +25,7 @@ public final class ActionResetAll implements Performable {
 
     @Override
     public void perform(Context aContext) {
+    	aContext.getaTCPServer().resetAll();
 
     }
 }

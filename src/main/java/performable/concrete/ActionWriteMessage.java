@@ -25,6 +25,8 @@ public final class ActionWriteMessage implements Performable {
 
     @Override
     public void perform(Context aContext) {
-
+    	aContext.getaTCPServer().inc_I();
+    	aContext.getaTCPServer().writeMsg();
+    	aContext.getaTCPServer().timer();
     }
 }

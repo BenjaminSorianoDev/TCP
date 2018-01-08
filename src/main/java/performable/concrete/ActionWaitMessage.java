@@ -25,6 +25,8 @@ public final class ActionWaitMessage implements Performable {
 
     @Override
     public void perform(Context aContext) {
-
+    	aContext.getaTCPServer().writeSYN();
+    	aContext.getaTCPServer().writeACK();
+    	aContext.getaTCPServer().timer();
     }
 }

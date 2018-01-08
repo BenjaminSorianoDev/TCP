@@ -25,6 +25,6 @@ public final class ActionToEnd implements Performable {
 
     @Override
     public void perform(Context aContext) {
-
+    	aContext.getaTCPServer().writeFIN();
     }
 }
