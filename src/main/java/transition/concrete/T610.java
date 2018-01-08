@@ -1,6 +1,7 @@
 package main.java.transition.concrete;
 
 import main.java.Context;
+import main.java.state.concrete.*;
 import main.java.transition.AbstractTransition;
 
 /**
@@ -16,8 +17,7 @@ public final class T610 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createEndEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionResetAll());
-        // TODO
-        //this.setNextState();
+        this.setNextState(State1.getInstance(aContext));
     }
 
     public final static T610 getInstance(Context aContext){

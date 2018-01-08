@@ -1,6 +1,7 @@
 package main.java.transition.concrete;
 
 import main.java.Context;
+import main.java.state.concrete.*;
 import main.java.transition.AbstractTransition;
 
 /**
@@ -16,8 +17,7 @@ public final class T44 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createTimeOverEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionToEnd());
-        // TODO
-        //this.setNextState();
+        this.setNextState(State4.getInstance(aContext));
     }
 
     public final static T44 getInstance(Context aContext){
