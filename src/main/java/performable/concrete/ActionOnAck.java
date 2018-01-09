@@ -4,6 +4,7 @@ import main.java.Context;
 import main.java.performable.Performable;
 
 /**
+ * Actions performed when an ACK signal is received.
  * @author BSo
  **/
 public final class ActionOnAck implements Performable {

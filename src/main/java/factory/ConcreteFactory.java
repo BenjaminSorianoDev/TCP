@@ -7,6 +7,7 @@ import main.java.state.concrete.*;
 import main.java.transition.concrete.*;
 
 /**
+ * Factory to create every state and transition needed to run the finite state machine.
  * @author BSo & MMo
  **/
 public class ConcreteFactory {
@@ -18,16 +19,13 @@ public class ConcreteFactory {
     }
 
     /**
-     * TODO
      * Create a main.java.state.concrete.State0 instance
      * @return a main.java.state.concrete.State0
      */
     public State0 createState0() {
         return State0.getInstance(this.aContext);
     }
-    public State1 createState1() {
-        return State1.getInstance(this.aContext);
-    }
+    public State1 createState1() { return State1.getInstance(this.aContext); }
     public State2 createState2() {
         return State2.getInstance(this.aContext);
     }

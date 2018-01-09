@@ -6,6 +6,7 @@ import main.java.satisfiable.Satisfiable;
 import main.java.state.AbstractState;
 
 /**
+ * AbstractTransition as defined in the Transition pattern.
  * @author BSo
  **/
 public abstract class AbstractTransition {

@@ -4,6 +4,7 @@ import main.java.Context;
 import main.java.performable.Performable;
 
 /**
+ * Actions performed when a RST signal is received.
  * @author BSo
  **/
 public final class ActionForReset implements Performable{

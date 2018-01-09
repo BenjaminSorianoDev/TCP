@@ -4,6 +4,7 @@ import main.java.Context;
 import main.java.performable.Performable;
 
 /**
+ * Actions performed when we're writing a message.
  * @author BSo
  **/
 public final class ActionWriteMessage implements Performable {

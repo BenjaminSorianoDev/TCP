@@ -4,6 +4,7 @@ import main.java.Context;
 import main.java.performable.Performable;
 
 /**
+ * Actions performed when a Timeover is detected.
  * @author BSo
  **/
 public final class ActionOnTimer implements Performable {

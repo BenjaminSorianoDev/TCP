@@ -1,19 +1,45 @@
 package main.java;
 
 import main.java.factory.ConcreteFactory;
+import main.java.satisfiable.Satisfiable;
 import main.java.state.AbstractState;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 /**
- * TODO
+ * Contains everything that's needed to run the Finite state machine.
  * @author BSo
  **/
 public class Context {
 
+    public Set<Event> getCmdA() {
+        return cmdA;
+    }
+
+    /**
+     * Control for avaiability of the applicative
+     */
+    private final Set<Event> cmdA = new LinkedHashSet<Event>();
+
+    /**
+     * Control for the received message type
+     */
+    private final Set<Event> tpcMsgC = new LinkedHashSet<Event>();
+
+    /**
+     * Control for when the response is fully sent
+     */
+    private final boolean EoF = false;
+
+    /**
+     * Control for when there is a timeover while waiting for an answer from the IP Layer.
+     */
+    private final boolean TimeOver = false;
+
     /**
      * Current State
-
      */
-
     private AbstractState aState;
 
     /**
@@ -63,6 +89,6 @@ public class Context {
     public void contextTry(){
         this.aState = aState.fire(this);
         // Ajouter le timer envoyer par mail par Marie pour la ligne suivante
-        //this.aTCPServer.aBasicTimer.stop();
+        // this.aTCPServer.aBasicTimer.stop();
     }
 }

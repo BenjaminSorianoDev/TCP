@@ -4,6 +4,7 @@ import main.java.Context;
 import main.java.performable.Performable;
 
 /**
+ * Actions performed when the response is fully sent.
  * @author BSo
  **/
 public final class ActionToEnd implements Performable {

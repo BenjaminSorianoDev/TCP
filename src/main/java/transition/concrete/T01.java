@@ -10,7 +10,7 @@ import main.java.transition.AbstractTransition;
 public final class T01 extends AbstractTransition {
 
     /**
-     *
+     *  T01 as defined by the CSpec.
      */
     public static volatile T01 instance = null;
 

@@ -4,6 +4,7 @@ import main.java.Context;
 import main.java.performable.Performable;
 
 /**
+ * Actions performed when we're opening the connection and waiting for a message.
  * @author BSo
  **/
 public final class ActionWaitMessage implements Performable {
