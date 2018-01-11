@@ -17,7 +17,7 @@ public final class T12 extends AbstractTransition{
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createSynEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionWaitMessage());
-        this.setNextState(State2.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState2());
     }
 
     public final static T12 getInstance(Context aContext){

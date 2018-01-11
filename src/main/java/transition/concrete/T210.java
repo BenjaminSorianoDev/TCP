@@ -17,7 +17,7 @@ public final class T210 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createTimeOverEvent());
         this.setAnAction(null);
-        this.setNextState(State1.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState1());
     }
 
     public final static T210 getInstance(Context aContext){

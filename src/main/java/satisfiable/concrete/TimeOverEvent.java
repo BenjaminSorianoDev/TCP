@@ -23,7 +23,9 @@ public final class TimeOverEvent implements Satisfiable {
         return TimeOverEvent.instance;
     }
     @Override
-    public boolean isSatisfied(Context aContexte) {
+    public boolean isSatisfied(Context aContext) {
+        if(aContext.isTimeOver())
+            return true;
         return false;
     }
 }

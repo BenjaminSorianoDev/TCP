@@ -17,7 +17,7 @@ public final class T611 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createTimeOverEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionForReset());
-        this.setNextState(State1.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState1());
     }
 
     public final static T611 getInstance(Context aContext){

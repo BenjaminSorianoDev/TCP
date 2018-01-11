@@ -1,6 +1,7 @@
 package main.java.satisfiable.concrete;
 
 import main.java.Context;
+import main.java.Event;
 import main.java.satisfiable.Satisfiable;
 
 /**
@@ -9,6 +10,10 @@ import main.java.satisfiable.Satisfiable;
 public final class CloseEvent implements Satisfiable {
 
     public static volatile CloseEvent instance = null;
+
+    private static final String EVENT_CLOSE = "Close" ;
+    //Event's section
+    private final Event close = new Event(EVENT_CLOSE);
 
     private CloseEvent(){}
 
@@ -23,7 +28,12 @@ public final class CloseEvent implements Satisfiable {
         return CloseEvent.instance;
     }
     @Override
-    public boolean isSatisfied(Context aContexte) {
+    public boolean isSatisfied(Context aContext) {
+        for(Event event : aContext.getCmdA()) {
+            if (event.is(close)){
+                return true;
+            }
+        }
         return false;
     }
 }

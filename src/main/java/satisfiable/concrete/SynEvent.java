@@ -1,12 +1,17 @@
 package main.java.satisfiable.concrete;
 
 import main.java.Context;
+import main.java.Event;
 import main.java.satisfiable.Satisfiable;
 
 /**
  * @author BSo
  **/
 public final class SynEvent implements Satisfiable{
+
+    private static final String EVENT_SYN = "Syn" ;
+    //Event's section
+    private final Event syn = new Event(EVENT_SYN);
 
     public static volatile SynEvent instance = null;
 
@@ -23,7 +28,12 @@ public final class SynEvent implements Satisfiable{
         return SynEvent.instance;
     }
     @Override
-    public boolean isSatisfied(Context aContexte) {
+    public boolean isSatisfied(Context aContext) {
+        for(Event event : aContext.getTpcMsgC()) {
+            if (event.is(syn)){
+                return true;
+            }
+        }
         return false;
     }
 }

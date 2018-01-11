@@ -17,7 +17,7 @@ public final class T34 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createAckEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionWriteFinalMessage());
-        this.setNextState(State4.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState4());
     }
 
     public final static T34 getInstance(Context aContext){

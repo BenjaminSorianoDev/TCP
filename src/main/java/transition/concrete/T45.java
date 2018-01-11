@@ -17,7 +17,7 @@ public final class T45 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createAckEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionOnTimer());
-        this.setNextState(State5.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState5());
     }
 
     public final static T45 getInstance(Context aContext){

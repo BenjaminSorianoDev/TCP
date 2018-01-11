@@ -17,7 +17,7 @@ public final class T331 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createAckEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionWriteMessage());
-        this.setNextState(State3.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState3());
     }
 
     public final static T331 getInstance(Context aContext){
