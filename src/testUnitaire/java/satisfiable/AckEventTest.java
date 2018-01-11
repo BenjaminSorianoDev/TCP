@@ -21,10 +21,6 @@ public class AckEventTest {
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
-	@Test
 	public void testGetInstance1() {
 		AckEvent a = AckEvent.getInstance();
 		assertNotNull(AckEvent.instance);
