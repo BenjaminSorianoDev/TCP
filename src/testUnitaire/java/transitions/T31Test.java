@@ -1,4 +1,4 @@
-package testUnitaire.java.state;
+package testUnitaire.java.transitions;
 
 import static org.junit.Assert.*;
 
@@ -8,10 +8,9 @@ import org.junit.Test;
 
 import main.java.Context;
 import main.java.TCPServer;
-import main.java.state.*;
-import main.java.state.concrete.State3;
+import main.java.transition.concrete.T31;
 
-public class State3Test {
+public class T31Test {
 
 	static TCPServer t;
 	static Context aContext;
@@ -27,24 +26,23 @@ public class State3Test {
 	}
 
 	@Test
-	public void testConstructeur() {
-		State3 s = State3.getInstance(aContext);
-		assertEquals(s.getTransitionSet().size(),5);
-		
+	public void testT31() {
+		T31 t = aContext.getaConcreteFactory().createT31();
+		assertEquals(t.getaContext(),aContext);
 	}
 	
 	@Test 
 	public void testGetInstance1()
 	{
-		State3 s = aContext.getaConcreteFactory().createState3();
+		T31 s = aContext.getaConcreteFactory().createT31();
 		assertNotNull(s.instance);
 	}
 	
 	@Test 
 	public void testGetInstance2()
 	{
-		State3 s = State3.getInstance(aContext);
-		State3 s2 = State3.getInstance(aContext);
+		T31 s = aContext.getaConcreteFactory().createT31();
+		T31 s2 = aContext.getaConcreteFactory().createT31();
 		assertEquals(s,s2);
 	}
 

@@ -1,7 +1,6 @@
 package main.java.transition.concrete;
 
 import main.java.Context;
-import main.java.state.concrete.State7;
 import main.java.transition.AbstractTransition;
 
 /**
