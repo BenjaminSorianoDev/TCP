@@ -1,14 +1,16 @@
 package testUnitaire.java.performable;
 
 import static org.junit.Assert.*;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import  main.java.performable.concrete.ActionForReset;
-public class ActionForResetTest {
+import main.java.performable.concrete.ActionWriteFinalMessage;
 
-	public ActionForReset a;
+public class ActionWriteFinalMessageTest {
+
+	public ActionWriteFinalMessage a;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -19,15 +21,15 @@ public class ActionForResetTest {
 
 	@Test
 	public void testGetInstance1() {
-		a = ActionForReset.getInstance();
-		assertNotNull(ActionForReset.instance);
+		a = ActionWriteFinalMessage.getInstance();
+		assertNotNull(ActionWriteFinalMessage.instance);
 	}
 	
 	@Test
 	public void testGetInstance2()
 	{
-		a = ActionForReset.getInstance();
-		ActionForReset b = ActionForReset.getInstance();
+		a = ActionWriteFinalMessage.getInstance();
+		ActionWriteFinalMessage b = ActionWriteFinalMessage.getInstance();
 		assertEquals(a, b);
 	}
 	

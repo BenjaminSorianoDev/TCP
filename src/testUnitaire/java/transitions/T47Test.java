@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import main.java.Context;
 import main.java.TCPServer;
-import main.java.transition.concrete.T31;
+import main.java.transition.concrete.T47;
 
 public class T47Test {
 
@@ -27,23 +27,23 @@ public class T47Test {
 	}
 
 	@Test
-	public void testT31() {
-		T31 t = aContext.getaConcreteFactory().createT31();
+	public void testT47() {
+		T47 t = aContext.getaConcreteFactory().createT47();
 		assertEquals(t.getaContext(),aContext);
 	}
 	
 	@Test 
 	public void testGetInstance1()
 	{
-		T31 s = aContext.getaConcreteFactory().createT31();
-		assertNotNull(T31.instance);
+		T47 s = aContext.getaConcreteFactory().createT47();
+		assertNotNull(T47.instance);
 	}
 	
 	@Test 
 	public void testGetInstance2()
 	{
-		T31 s = aContext.getaConcreteFactory().createT31();
-		T31 s2 = aContext.getaConcreteFactory().createT31();
+		T47 s = aContext.getaConcreteFactory().createT47();
+		T47 s2 = aContext.getaConcreteFactory().createT47();
 		assertEquals(s,s2);
 	}
 
