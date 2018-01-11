@@ -6,6 +6,7 @@ import main.java.Context;
 import java.util.*;
 
 /**
+ * AbstractState as defined in the Transition pattern.
  * @author BSo
  **/
 public abstract class AbstractState {

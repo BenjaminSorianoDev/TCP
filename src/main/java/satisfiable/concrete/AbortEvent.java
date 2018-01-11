@@ -4,6 +4,7 @@ import main.java.Context;
 import main.java.satisfiable.Satisfiable;
 
 /**
+ * Checks whether the condition ... is satisfied.
  * @author BSo
  **/
 public final class AbortEvent implements Satisfiable {
@@ -24,6 +25,7 @@ public final class AbortEvent implements Satisfiable {
     }
     @Override
     public boolean isSatisfied(Context aContexte) {
-    	return false;
+
+        return true;
     }
 }

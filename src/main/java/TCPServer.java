@@ -9,8 +9,7 @@ import main.java.satisfiable.*;
  * @author BSo
  **/
 public class TCPServer {
-   
-	private final Set<Satisfiable> cmdA = new LinkedHashSet<Satisfiable>();
+
 	private TCPServer()
 	{
 	}

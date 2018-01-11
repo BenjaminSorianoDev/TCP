@@ -4,6 +4,7 @@ import main.java.Context;
 import main.java.state.AbstractState;
 
 /**
+ * State0 of the finite state machine.
  * @author BSo
  **/
 public final class State0 extends AbstractState {

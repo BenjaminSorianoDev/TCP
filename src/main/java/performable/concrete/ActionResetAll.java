@@ -4,6 +4,7 @@ import main.java.Context;
 import main.java.performable.Performable;
 
 /**
+ * Actions performed when the applicative is returned to a waiting state.
  * @author BSo
  **/
 public final class ActionResetAll implements Performable {
