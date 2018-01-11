@@ -1,12 +1,17 @@
 package main.java.satisfiable.concrete;
 
 import main.java.Context;
+import main.java.Event;
 import main.java.satisfiable.Satisfiable;
 
 /**
  * @author BSo
  **/
 public final class AckEvent implements Satisfiable {
+
+    private static final String EVENT_ACK = "Ack" ;
+    //Event's section
+    private final Event ack = new Event(EVENT_ACK);
 
     public static volatile AckEvent instance = null;
 
@@ -24,7 +29,13 @@ public final class AckEvent implements Satisfiable {
     }
 
     @Override
-    public boolean isSatisfied(Context aContexte) {
+    public boolean isSatisfied(Context aContext) {
+
+        for(Event event : aContext.getTpcMsgC()) {
+            if (event.is(ack)){
+                return true;
+            }
+        }
         return false;
     }
 }

@@ -22,6 +22,18 @@ public class Context {
      */
     private final Set<Event> cmdA = new LinkedHashSet<Event>();
 
+    public Set<Event> getTpcMsgC() {
+        return tpcMsgC;
+    }
+
+    public boolean isEoF() {
+        return EoF;
+    }
+
+    public boolean isTimeOver() {
+        return TimeOver;
+    }
+
     /**
      * Control for the received message type
      */

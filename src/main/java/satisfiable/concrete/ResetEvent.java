@@ -2,12 +2,17 @@ package main.java.satisfiable.concrete;
 
 import com.sun.org.apache.regexp.internal.RE;
 import main.java.Context;
+import main.java.Event;
 import main.java.satisfiable.Satisfiable;
 
 /**
  * @author BSo
  **/
 public final class ResetEvent implements Satisfiable {
+
+    private static final String EVENT_RST = "Rst" ;
+    //Event's section
+    private final Event rst = new Event(EVENT_RST);
 
     public static volatile ResetEvent instance = null;
 
@@ -24,7 +29,12 @@ public final class ResetEvent implements Satisfiable {
         return ResetEvent.instance;
     }
     @Override
-    public boolean isSatisfied(Context aContexte) {
+    public boolean isSatisfied(Context aContext) {
+        for(Event event : aContext.getTpcMsgC()) {
+            if (event.is(rst)){
+                return true;
+            }
+        }
         return false;
     }
 }
