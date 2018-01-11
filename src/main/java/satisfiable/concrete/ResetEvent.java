@@ -1,6 +1,5 @@
 package main.java.satisfiable.concrete;
 
-import com.sun.org.apache.regexp.internal.RE;
 import main.java.Context;
 import main.java.Event;
 import main.java.satisfiable.Satisfiable;

@@ -1,4 +1,4 @@
-package testUnitaire.java.state;
+package testUnitaire.java.transitions;
 
 import static org.junit.Assert.*;
 
@@ -8,12 +8,14 @@ import org.junit.Test;
 
 import main.java.Context;
 import main.java.TCPServer;
-import main.java.state.concrete.State4;
+import main.java.transition.concrete.T330;
 
-public class State4Test {
+public class T330Test {
+
 
 	static TCPServer t;
 	static Context aContext;
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		t = new TCPServer();
@@ -25,25 +27,25 @@ public class State4Test {
 	}
 
 	@Test
-	public void testConstructeur() {
-		State4 s = State4.getInstance(aContext);
-		assertEquals(s.getTransitionSet().size(),4);
-		
+	public void testT330() {
+		T330 t = aContext.getaConcreteFactory().createT330();
+		assertEquals(t.getaContext(),aContext);
 	}
 	
 	@Test 
 	public void testGetInstance1()
 	{
-		State4 s = State4.getInstance(aContext);
-		assertNotNull(State4.instance);
+		T330 s = aContext.getaConcreteFactory().createT330();
+		assertNotNull(T330.instance);
 	}
 	
 	@Test 
 	public void testGetInstance2()
 	{
-		State4 s = State4.getInstance(aContext);
-		State4 s2 = State4.getInstance(aContext);
+		T330 s = aContext.getaConcreteFactory().createT330();
+		T330 s2 = aContext.getaConcreteFactory().createT330();
 		assertEquals(s,s2);
 	}
+
 
 }

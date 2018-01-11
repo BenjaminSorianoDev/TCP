@@ -38,7 +38,7 @@ public abstract class AbstractState {
      * @return the new state to fire or the current state
      */
     public AbstractState fire(Context aContext){
-        Iterator it = transitionSet.iterator();
+        Iterator<AbstractTransition> it = transitionSet.iterator();
         while(it.hasNext())
         {
             AbstractTransition aTransition = (AbstractTransition) it.next();

@@ -20,7 +20,7 @@ public class ActionForResetTest {
 	@Test
 	public void testGetInstance() {
 		a = ActionForReset.getInstance();
-		assertNotNull(a.instance);
+		assertNotNull(ActionForReset.instance);
 	}
 	
 	@Test

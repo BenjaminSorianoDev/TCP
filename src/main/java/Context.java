@@ -1,7 +1,6 @@
 package main.java;
 
 import main.java.factory.ConcreteFactory;
-import main.java.satisfiable.Satisfiable;
 import main.java.state.AbstractState;
 
 import java.util.LinkedHashSet;

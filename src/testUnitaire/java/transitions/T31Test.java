@@ -35,7 +35,7 @@ public class T31Test {
 	public void testGetInstance1()
 	{
 		T31 s = aContext.getaConcreteFactory().createT31();
-		assertNotNull(s.instance);
+		assertNotNull(T31.instance);
 	}
 	
 	@Test 

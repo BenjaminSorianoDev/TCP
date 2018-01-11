@@ -8,7 +8,6 @@ import org.junit.Test;
 
 import main.java.Context;
 import main.java.TCPServer;
-import main.java.state.*;
 import main.java.state.concrete.State3;
 
 public class State3Test {
@@ -37,7 +36,7 @@ public class State3Test {
 	public void testGetInstance1()
 	{
 		State3 s = aContext.getaConcreteFactory().createState3();
-		assertNotNull(s.instance);
+		assertNotNull(State3.instance);
 	}
 	
 	@Test 
