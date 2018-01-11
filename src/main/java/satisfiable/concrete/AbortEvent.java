@@ -25,8 +25,7 @@ public final class AbortEvent implements Satisfiable {
     }
     @Override
     public boolean isSatisfied(Context aContexte) {
-       // aContexte.getaTCPServer().
-        // TODO
+
         return true;
     }
 }
