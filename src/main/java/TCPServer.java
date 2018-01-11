@@ -10,7 +10,7 @@ import main.java.satisfiable.*;
  **/
 public class TCPServer {
 
-	private TCPServer()
+	public TCPServer()
 	{
 	}
 	

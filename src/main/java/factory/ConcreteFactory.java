@@ -25,7 +25,8 @@ public class ConcreteFactory {
     public State0 createState0() {
         return State0.getInstance(this.aContext);
     }
-    public State1 createState1() { return State1.getInstance(this.aContext); }
+    public State1 createState1() { 
+    	return State1.getInstance(this.aContext); }
     public State2 createState2() {
         return State2.getInstance(this.aContext);
     }
