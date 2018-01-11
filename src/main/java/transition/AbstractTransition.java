@@ -9,6 +9,23 @@ import main.java.state.AbstractState;
  * @author BSo
  **/
 public abstract class AbstractTransition {
+	
+	/**
+     * The condition to make the transition
+     */
+
+    private Satisfiable aCondition;
+    /**
+     * The action to perform
+     */
+    private Performable anAction;
+    /**
+     * The state where to go
+     */
+    private AbstractState nextState;
+
+    private Context aContext;
+	
 
     public Satisfiable getaCondition() {
         return aCondition;
@@ -41,22 +58,6 @@ public abstract class AbstractTransition {
     public void setaContext(Context aContext) {
         this.aContext = aContext;
     }
-
-    /**
-     * The condition to make the transition
-     */
-
-    private Satisfiable aCondition;
-    /**
-     * The action to perform
-     */
-    private Performable anAction;
-    /**
-     * The state where to go
-     */
-    private AbstractState nextState;
-
-    private Context aContext;
 
     /**
      *
