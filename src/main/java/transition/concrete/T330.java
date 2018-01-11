@@ -17,7 +17,7 @@ public final class T330 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createTimeOverEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionWriteFinalMessage());
-        this.setNextState(State3.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState3());
     }
 
     public final static T330 getInstance(Context aContext){

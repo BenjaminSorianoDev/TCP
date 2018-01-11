@@ -17,7 +17,7 @@ public final class T41 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createResetEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionOnAck());
-        this.setNextState(State1.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState1());
     }
 
     public final static T41 getInstance(Context aContext){

@@ -18,7 +18,7 @@ public final class T56 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createTimeOverEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionOnTimer());
-        this.setNextState(State6.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState6());
     }
 
     public final static T56 getInstance(Context aContext){

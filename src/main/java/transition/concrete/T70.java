@@ -17,7 +17,7 @@ public final class T70 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(null);
         this.setAnAction(aContext.getaConcreteFactory().createActionForReset());
-        this.setNextState(State0.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState0());
     }
 
     public final static T70 getInstance(Context aContext){

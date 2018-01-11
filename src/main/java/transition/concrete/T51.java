@@ -17,7 +17,7 @@ public final class T51 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createEndEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionOnAck());
-        this.setNextState(State1.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState1());
     }
 
     public final static T51 getInstance(Context aContext){

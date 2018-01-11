@@ -17,7 +17,7 @@ public final class T44 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createTimeOverEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionToEnd());
-        this.setNextState(State4.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState4());
     }
 
     public final static T44 getInstance(Context aContext){

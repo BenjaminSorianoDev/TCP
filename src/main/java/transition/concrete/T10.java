@@ -17,7 +17,7 @@ public final class T10 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createCloseEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionForReset());
-        this.setNextState(State0.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState0());
     }
 
     public final static T10 getInstance(Context aContext){

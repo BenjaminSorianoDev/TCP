@@ -17,7 +17,7 @@ public final class T37 extends AbstractTransition {
         this.setaContext(aContext);
         this.setaCondition(aContext.getaConcreteFactory().createAbortEvent());
         this.setAnAction(aContext.getaConcreteFactory().createActionForReset());
-        this.setNextState(State7.getInstance(aContext));
+        this.setNextState(aContext.getaConcreteFactory().createState7());
     }
 
     public final static T37 getInstance(Context aContext){
